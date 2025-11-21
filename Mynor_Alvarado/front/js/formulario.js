@@ -84,20 +84,45 @@ document.addEventListener('DOMContentLoaded', function() {
     fecha.addEventListener('input', validarFecha);
 
     // envío del formulario
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
+    form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-        const v1 = validarNombre();
-        const v2 = validarFecha();
-        const v3 = validarTelefono();
-        const v4 = validarCorreo();
+    const v1 = validarNombre();
+    const v2 = validarFecha();
+    const v3 = validarTelefono();
+    const v4 = validarCorreo();
 
-        if (!v1 || !v2 || !v3 || !v4) {
-            alert("Complete correctamente todos los campos.");
+    if (!v1 || !v2 || !v3 || !v4) {
+        alert("Complete correctamente todos los campos.");
+        return;
+    }
+
+    try {
+        const respuesta = await fetch("http://localhost:3000/guardar_usuario", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                nombre: nombre.value,
+                fecha: fecha.value,       // dd-mm-YYYY
+                telefono: telefono.value,
+                correo: correo.value,
+            }),
+        });
+
+        const data = await respuesta.json();
+
+        if (!respuesta.ok) {
+            alert(data.error || "Ocurrió un error al guardar el usuario.");
             return;
         }
 
-        alert("Validación correcta. Formulario enviado.");
-    });
+        alert(`Usuario almacenado correctamente. ID generado: ${data.id}`);
+    } catch (error) {
+        console.error(error);
+        alert("No se pudo conectar con el servidor backend.");
+    }
+});
 
 });

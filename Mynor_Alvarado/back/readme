@@ -1,0 +1,17 @@
+
+# Backend
+
+## serie 5 - Creacion de servidor Backend Node Js Y Express en el puerto 3000
+
+1. iniciamos con 
+# npm init -y
+2. Instalamos express y dependecias con 
+# npm install express cors mysql
+se agrego la ruta POST / guardar usuario
+se valido el usario que fuera mayor de edad
+se asigno estado activo automaticamente
+se guarda el usuario en la base de datos
+conexion con mysql
+
+al realizar un push realizar un npm install ya que se ignoro el node modules para evitar 
+errores al descargar los cambios.
