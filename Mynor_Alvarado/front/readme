@@ -19,3 +19,7 @@ se implemento el formulario con validaciones para el cliente, un calculo automat
 se implemento la creacion de la base de datos con dos tablas llamadas usuario y estado_usuario
 junto a los insert estaticos en la tabla de estado_usuario.
 se creo correctamente con lo solicitado en las tablas.
+
+## serie 5
+el front muesta que el usuario fue almacenado y muestra su id
+

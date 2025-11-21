@@ -62,13 +62,22 @@ exports.guardarUsuario = async (req, res) => {
 
         // devolucion de id
         return res.json({
-            mensaje: "Usuario almacenado correctamente.",
-            id: result.insertId,
-        });
-    } catch (error) {
-        console.error(error);
-        return res.status(500).json({
-            error: "Ocurrió un error inesperado en el servidor.",
+    mensaje: "Usuario almacenado correctamente.",
+    id: result.insertId,
+});
+} catch (error) {
+    console.error(error);
+
+    // Correo repetido
+    if (error.code === "ER_DUP_ENTRY") {
+        return res.status(400).json({
+            error: "El correo ingresado ya está registrado. Intente con otro.",
         });
     }
+
+    // Error general
+    return res.status(500).json({
+        error: "Ocurrió un error inesperado en el servidor.",
+    });
+}
 };

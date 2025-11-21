@@ -13,5 +13,14 @@ se asigno estado activo automaticamente
 se guarda el usuario en la base de datos
 conexion con mysql
 
-al realizar un push realizar un npm install ya que se ignoro el node modules para evitar 
+al realizar un push realizar un 
+# npm install
+ ya que se ignoro el node modules para evitar 
 errores al descargar los cambios.
+
+## serie 6 - Implementacion de reportes en el backen
+se creo la ruta get / ejecutar_reporte/ :reporte
+se implementaron los reportes
+se agrego el error 500
+controlador de reportes con consultar mysql
+retorno de informacion en formato json
