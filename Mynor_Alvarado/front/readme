@@ -13,3 +13,9 @@ js/index.js
 ## serie 3 - Fomulario con validaciones y script
 
 se implemento el formulario con validaciones para el cliente, un calculo automatico de edad y la creacion inicial del script.sql donde se completara con los datos solicitados en la serie 4 y 7.
+
+## serie 4 - Creacion de base de datos 
+
+se implemento la creacion de la base de datos con dos tablas llamadas usuario y estado_usuario
+junto a los insert estaticos en la tabla de estado_usuario.
+se creo correctamente con lo solicitado en las tablas.
