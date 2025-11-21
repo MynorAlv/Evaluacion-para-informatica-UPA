@@ -1,0 +1,11 @@
+# Evaluacion tecnologica Mynor Alvarado 
+
+## serie 2 - Pagina Inicial (HTML, CSS, JSS)
+
+Se implemento una pagina incial en HTML, CSS, JS.
+La pagina incluye: Un mensaje de bienvenida, y enlaces para el formulario y reportes
+
+se separaron correctamente los archivos en 
+index.html
+css/style.css
+js/index.js
