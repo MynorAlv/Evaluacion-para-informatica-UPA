@@ -29,3 +29,21 @@ values ('1', 'Activo', 'activo');
 
 insert into estado_usuario (id, titulo, clave)
 values ('2', 'Baja Permanente', 'baja');
+
+-- 4. insert de la serie 7 
+-- Usuario con estado de baja
+insert into usuario (nombre, fecha, telefono, correo, creacion, estado_usuario_id)
+values ('Pepito', '1999-01-01', '55508978', 'pepito@gmail.com', now(), 2);
+
+-- usuarios creados ayer
+insert into usuario (nombre, fecha, telefono, correo, creacion, estado_usuario_id)
+values
+('juan perez',  '2000-02-01', '23452345', 'juan.ayer@gmail.com', date_sub(now(), interval 1 day), 1),
+('josue martinez', '2002-03-10', '66775634', 'josue.ayer@gmail.com', date_sub(now(), interval 1 day), 1);
+
+-- usuarios creados el mes pasado
+insert into usuario (nombre, fecha, telefono, correo, creacion, estado_usuario_id)
+values
+('jorge ramirez',  '1995-02-01', '44446778', 'jorge.mesp@gmail.com', date_sub(now(), interval 1 month), 1),
+('jose gomez', '1995-03-10', '55559088', 'jose.mesp@gmail.com', date_sub(now(), interval 1 month), 1);
+

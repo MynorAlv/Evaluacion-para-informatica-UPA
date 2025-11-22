@@ -23,3 +23,5 @@ se creo correctamente con lo solicitado en las tablas.
 ## serie 5
 el front muesta que el usuario fue almacenado y muestra su id
 
+## serie 7 - Link de reportes con lista de reportes que se mandan a traer del servidor
+se muestra los reportes consumiendo datos desde el bakend utilizando fetch, se muestran reportes de todos los usuarios, usuarios creados hoy y usuarios creados el dia de ayer.

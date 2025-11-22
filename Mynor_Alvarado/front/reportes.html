@@ -13,7 +13,18 @@
         <li><a href="reportes.html">Reportes</a></li>
     </ul>
     <h1>Reportes</h1>
+    
+     <ul>
+        <li><button onclick="cargarReporte('todos')">Todos los usuarios</button></li>
+        <li><button onclick="cargarReporte('hoy')">Usuarios creados hoy</button></li>
+        <li><button onclick="cargarReporte('ayer')">Usuarios creados ayer</button></li>
+    </ul>
 
+     <div id="resultado" 
+         style="white-space: pre; background: #eee; padding: 10px; border-radius: 5px;">
+    </div>
+
+    </li>
     <script src="js/reportes.js"></script>
 </body>
 </html>
