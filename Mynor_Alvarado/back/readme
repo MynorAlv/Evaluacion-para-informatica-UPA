@@ -24,3 +24,9 @@ se implementaron los reportes
 se agrego el error 500
 controlador de reportes con consultar mysql
 retorno de informacion en formato json
+
+
+## segunda parte de evaluacion 
+
+## serie 4 
+se implemento la nueva ruta en el backend con nombre de guardar punteo en la cual se recibira el formulario creeado en la serie 3 

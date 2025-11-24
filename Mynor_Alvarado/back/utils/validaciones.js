@@ -35,11 +35,16 @@ function convertirFechaSQL(fecha) {
     return `${yyyy}-${mm}-${dd}`;
 }
 
+function validarPunteo(Punteo){
+    return  /^([1-9]{1,2}|100)$/.test(Punteo || "");
+}
+
 module.exports = {
     validarNombre,
     validarTelefono,
     validarCorreo,
     validarFecha,
     calcularEdad,
-    convertirFechaSQL
+    convertirFechaSQL,
+    validarPunteo
 };

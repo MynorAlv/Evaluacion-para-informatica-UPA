@@ -51,11 +51,12 @@ values
 -- serie 2
 create table punteo_usuario (
 punteo int not null,
-fecha_ingreso date not null,
+fecha_ingreso timestamp default current_timestamp,
 usuario_id int not null,
 foreign key (usuario_id) references usuario(id)
 );
 
-   
+
+select * from usuario;
 
 

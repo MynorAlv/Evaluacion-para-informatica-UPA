@@ -36,15 +36,13 @@ document.addEventListener('DOMContentLoaded', function() {
     Punteo.addEventListener('input', validarPunteo);
 
 
-    //se configurara mas adelante 
     // envío del formulario
     form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const v1 = validarNombre();
-    const v2 = validarFecha();
-    const v3 = validarPunteo();
-    const v4 = validarCorreo();
+    const v1 = validarCorreo();
+    const v2 = validarPunteo();
+
 
     if (!v1 || !v2 || !v3 || !v4) {
         alert("Complete correctamente todos los campos.");
@@ -52,27 +50,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     try {
-        const respuesta = await fetch("http://localhost:3000/guardar_usuario", {
+        const respuesta = await fetch("http://localhost:3000/guardar_punteo", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                nombre: nombre.value,
-                fecha: fecha.value,       // dd-mm-YYYY
-                telefono: telefono.value,
+                
                 correo: correo.value,
+                Punteo: Punteo.value,
             }),
         });
 
         const data = await respuesta.json();
 
         if (!respuesta.ok) {
-            alert(data.error || "Ocurrió un error al guardar el usuario.");
+            alert(data.error || "Ocurrió un error al guardar el punteo.");
             return;
         }
 
-        alert(`Usuario almacenado correctamente. ID generado: ${data.id}`);
+        alert(`Punteo almacenado correctamente. ID generado: ${data.id}`);
     } catch (error) {
         console.error(error);
         alert("No se pudo conectar con el servidor backend.");

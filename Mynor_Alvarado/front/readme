@@ -33,3 +33,6 @@ Clonacion de repositorio publico de la primera parte realizada con exito se real
 
 ## serie 3 - Implementacion de nueva pagina en el front con ruta Ingresar punteo
 Se implemento la creacion de nueva pagina Ingrear punteo esta ruta muestra el formulario con dos campos nuevos para ingresar el correo del usuario validando su estructura y un segundo campo para ingresar un punto siempre mostrando el error al ingresar campos incorrectos.
+
+## serie 4 - 
+validacion de campos en el front de usuarios
