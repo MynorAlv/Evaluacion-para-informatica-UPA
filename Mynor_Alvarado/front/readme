@@ -25,3 +25,9 @@ el front muesta que el usuario fue almacenado y muestra su id
 
 ## serie 7 - Link de reportes con lista de reportes que se mandan a traer del servidor
 se muestra los reportes consumiendo datos desde el bakend utilizando fetch, se muestran reportes de todos los usuarios, usuarios creados hoy y usuarios creados el dia de ayer.
+
+# Segunda parte evaluacion tecnologica UPA Mynor Alvarado
+
+## serie 1 
+Clonacion de repositorio publico de la primera parte realizada con exito se realizara una union enter el repositorio actual local y remoto.
+
