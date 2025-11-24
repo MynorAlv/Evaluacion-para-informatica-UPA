@@ -47,3 +47,15 @@ values
 ('jorge ramirez',  '1995-02-01', '44446778', 'jorge.mesp@gmail.com', date_sub(now(), interval 1 month), 1),
 ('jose gomez', '1995-03-10', '55559088', 'jose.mesp@gmail.com', date_sub(now(), interval 1 month), 1);
 
+
+-- serie 2
+create table punteo_usuario (
+punteo int not null,
+fecha_ingreso date not null,
+usuario_id int not null,
+foreign key (usuario_id) references usuario(id)
+);
+
+   
+
+
